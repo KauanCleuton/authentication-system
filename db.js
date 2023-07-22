@@ -18,9 +18,9 @@
 
 // const addUser = async (username, password) => {
 //   const id = uuidV4();
-//   const hashedPassword = await exports.hashPassword(password); // Corrigido para hashPassword
+//   const hashedPassword = await exports.hashPassword(password);
 
-//   db.run('INSERT INTO users (id, username, password) VALUES (?, ?, ?)', id, username, hashedPassword); // Corrigido para id, username, hashedPassword
+//   db.run('INSERT INTO users (id, username, password) VALUES (?, ?, ?)', id, username, hashedPassword);
 // };
 
 // const getUserByUsername = async (username) => {
