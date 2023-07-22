@@ -72,16 +72,16 @@ app.get('/', (request, response) => {
   response.render('register');
 });
 
-app.post('/register', async (req, res) => {
-  const { username, password } = req.body;
+app.post('/register', async (request, response) => {
+  const { username, password } = request.body;
 
   try {
     const hashedPassword = await db.hashPassword(password);
     await db.addUser(username, hashedPassword);
-    res.redirect('/login');
+    response.redirect('/login');
   } catch (error) {
     console.error('Erro ao cadastrar usuário:', error);
-    res.status(500).send('Ocorreu um erro ao cadastrar o usuário.');
+    response.status(500).send('Ocorreu um erro ao cadastrar o usuário.');
   }
 });
 
