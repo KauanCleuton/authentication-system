@@ -1,49 +1,4 @@
-// const express = require('express');
-// const path = require('path');
-// const app = express();
 
-// const { addUser, comparePasswords, getUserByUsername, hashPassword, db } = require('./db')
-
-
-// app.set('view engine', 'ejs');
-// app.set('views', path.join(__dirname, 'views'));
-
-// app.use(express.urlencoded({ extended: true }));
-
-// app.get('/', (request, response) => {
-//   response.render('register');
-// });
-
-// app.post('/register', async (req, res) => {
-//   const { username, password } = req.body;
-//   const hashedPassword = await hashPassword(password)
-//   addUser(username, hashedPassword)
-//   res.redirect('/login');
-// });
-
-// app.get('/login', (request, response) => {
-//   response.render('login');
-// });
-
-// app.post('/login', async (request, response) => {
-//   const { username, password } = request.body;
-
-//   const user = await getUserByUsername(username);
-
-//   if (!user || !(await comparePasswords(password, user.password))) {
-//     response.status(401).send('Credenciais inválidas.');
-//   } else {
-//     response.redirect('/dashboard');
-//   }
-// });
-
-// app.get('/dashboard', (request, response) => {
-//   response.render('dashboard');
-// });
-
-// app.listen(3000, () => {
-//   console.log('Server is running');
-// });
 
 const express = require('express');
 const session = require('express-session');
